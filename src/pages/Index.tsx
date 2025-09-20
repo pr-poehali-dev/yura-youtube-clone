@@ -210,16 +210,20 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="flex items-center justify-between px-6 py-3">
-          <div className="flex items-center space-x-4">
-            <div className="gradient-pink-cyan p-2 rounded-xl">
-              <Icon name="Play" size={24} className="text-white" />
+        <div className="px-6 py-6">
+          {/* Logo centered */}
+          <div className="flex justify-center items-center mb-6">
+            <div className="flex items-center space-x-4">
+              <div className="gradient-pink-cyan p-3 rounded-xl">
+                <Icon name="Play" size={32} className="text-white" />
+              </div>
+              <h1 className="text-3xl font-bold gradient-text">VideoHub</h1>
             </div>
-            <h1 className="text-xl font-bold gradient-text">VideoHub</h1>
           </div>
           
-          <div className="flex-1 max-w-2xl mx-6">
-            <div className="relative">
+          {/* Search bar centered below logo */}
+          <div className="flex justify-center mb-4">
+            <div className="relative w-full max-w-2xl">
               <Input
                 placeholder="Поиск видео..."
                 value={searchQuery}
@@ -235,7 +239,8 @@ function Index() {
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          {/* User controls in top right */}
+          <div className="absolute top-6 right-6 flex items-center space-x-3">
             <Button size="sm" variant="ghost" className="hover:bg-muted">
               <Icon name="Bell" size={20} />
             </Button>
